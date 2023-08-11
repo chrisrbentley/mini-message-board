@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET users listing. */
+/* GET new page. */
 router.get('/', function (req, res, next) {
-	res.send('respond with a resource');
+	console.log('reached');
+	res.render('form', { test: 'test' });
 });
 
 module.exports = router;
