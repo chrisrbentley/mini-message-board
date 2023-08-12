@@ -12,7 +12,6 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/new', (req, res, next) => {
-	console.log(req.body.message);
 	messages.push({
 		text: req.body.message,
 		user: req.body.user,
