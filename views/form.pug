@@ -1,11 +1,17 @@
 extends layout
 
 block content
-  h1 Write a message!
+
+  header.form-header
+    h1.form-heading Write a message!
 
   form(method="POST" action="/new")
-    label(for="user") Name:
-    input(type="text" name="user")
-    label(for="message") Message:
-    input(type="text" name="message")
+    div.input-wrapper
+      label(for="user") Name:
+      input(type="text" name="user")
+    div.input-wrapper
+      label(for="message") Message:
+      input(type="text" name="message")
     button(type="submit") Submit
+  
+  a.go-home(href="/") Go home

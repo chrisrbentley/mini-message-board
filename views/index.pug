@@ -1,11 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  div
+  header.header
+    h1.index-heading= title
+  
+  //- p Welcome to #{title}
+  a.new-message(href="/new") New Message
+  main.index-main
     each message in messages
-      div
-        h2= message.user
-        p= message.added
-        p= message.text
+      div.message-container
+        div.message-info
+          h2= message.user
+          p= message.added
+        p.message-text= message.text
