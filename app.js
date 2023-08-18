@@ -9,6 +9,17 @@ const newRouter = require('./routes/new');
 
 const app = express();
 
+// Set up mongoose connection
+const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
+const mongoDB =
+	'mongodb+srv://chrisrbentley:AsherJamal2011@cluster0.byqxney.mongodb.net/message_board?retryWrites=true&w=majority';
+
+main().catch((err) => console.log(err));
+async function main() {
+	await mongoose.connect(mongoDB);
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

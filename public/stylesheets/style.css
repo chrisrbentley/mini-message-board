@@ -147,6 +147,10 @@ button[type='submit']:hover {
 	text-decoration: none;
 }
 
+.error-message {
+	color: red;
+}
+
 @media (max-width: 768px) {
 	form {
 		padding: 1rem 0.5rem;

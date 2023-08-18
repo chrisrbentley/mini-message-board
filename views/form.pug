@@ -8,10 +8,16 @@ block content
   form(method="POST" action="/new")
     div.input-wrapper
       label(for="user") Name:
-      input(type="text" name="user" id="user")
+      input(type="text" name="user" id="user" minlength='2' maxlength='15' required)
+      if errors && errors.user
+        span.error-message= errors.user.msg
     div.input-wrapper
       label(for="message") Message:
-      input(type="text" name="message" id="message")
+      input(type="text" name="message" id="message" minlength='5' maxlength='100' required)
+      if errors && errors.message
+        span.error-message= errors.message.msg
     button(type="submit") Submit
+
+
   
   a.go-home(href="/") Go home
