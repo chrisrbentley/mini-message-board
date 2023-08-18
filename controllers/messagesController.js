@@ -50,8 +50,6 @@ exports.createMessage = [
 				formattedErrors[error.path] = { msg: error.msg };
 			});
 
-			console.log(formattedErrors);
-
 			res.render('form', {
 				errors: formattedErrors,
 			});
