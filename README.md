@@ -1,4 +1,4 @@
-# Mini Message Board App README
+# Mini Message Board
 
 ## Overview
 
